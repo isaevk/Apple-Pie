@@ -100,14 +100,34 @@ class ViewController: UIViewController {
         "Yangon",
         "Alexandria",
         "Jinan",
-    ]
-    let totalwins =  0
-    let totalLosses = 0
+    ].shuffled()
+    var totalwins =  0 {
+        didSet{
+            newRound()
+        }
+    }
+    var totalLosses = 0 {
+        didSet {
+            newRound()
+        }
+    }
     // MARK: - Mathods
+    func enableButtons(_ enable: Bool = true){
+        for button in letterButtons {
+            button.isEnabled = enable
+        }
+    }
+    
     func newRound(){
+        guard !listOfWords.isEmpty else {
+            enableButtons(false)
+            updateUI()
+            return
+        }
         let newWord = listOfWords.removeFirst()
         currentGame = Game(word: newWord, incorrectMovesRemaining: incorrectMovesAllowed)
         updateUI()
+        enableButtons()
     }
     
     func updateCorrectWordName(){
@@ -118,6 +138,15 @@ class ViewController: UIViewController {
         correctWordLabel.text = displayWord.joined(separator: " ")
     }
     
+    func updateState(){
+        if currentGame.incorrectMovesRemaining < 1 {
+            totalLosses += 1
+        } else if currentGame.guessedWord == currentGame.word {
+            totalwins += 1
+        }else{
+            updateUI()
+        }
+    }
     
     func updateUI(){
         let movesRemaining = currentGame.incorrectMovesRemaining
@@ -139,6 +168,7 @@ class ViewController: UIViewController {
         let letter = sender.title(for: .normal)!
         currentGame.playerGuessed(letter: Character(letter))
         updateUI()
+        updateState()
     }
 }
 
