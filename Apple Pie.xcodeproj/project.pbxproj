@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD807DB628A172280080A624 /* Screenshot01.png in Resources */ = {isa = PBXBuildFile; fileRef = BD807DB428A172280080A624 /* Screenshot01.png */; };
+		BD807DB728A172280080A624 /* Screenshot02.png in Resources */ = {isa = PBXBuildFile; fileRef = BD807DB528A172280080A624 /* Screenshot02.png */; };
 		BDAE271D289ACE2800E0E701 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAE271C289ACE2800E0E701 /* AppDelegate.swift */; };
 		BDAE271F289ACE2800E0E701 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAE271E289ACE2800E0E701 /* SceneDelegate.swift */; };
 		BDAE2721289ACE2800E0E701 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAE2720289ACE2800E0E701 /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD807DB428A172280080A624 /* Screenshot01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshot01.png; sourceTree = SOURCE_ROOT; };
+		BD807DB528A172280080A624 /* Screenshot02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshot02.png; sourceTree = SOURCE_ROOT; };
 		BDAE2719289ACE2800E0E701 /* Apple Pie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Apple Pie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDAE271C289ACE2800E0E701 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDAE271E289ACE2800E0E701 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +43,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD807DB328A171E10080A624 /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				BD807DB428A172280080A624 /* Screenshot01.png */,
+				BD807DB528A172280080A624 /* Screenshot02.png */,
+			);
+			path = Screenshots;
+			sourceTree = "<group>";
+		};
 		BDAE2710289ACE2800E0E701 = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +71,15 @@
 		BDAE271B289ACE2800E0E701 /* Apple Pie */ = {
 			isa = PBXGroup;
 			children = (
+				BD807DB328A171E10080A624 /* Screenshots */,
 				BDAE271C289ACE2800E0E701 /* AppDelegate.swift */,
 				BDAE271E289ACE2800E0E701 /* SceneDelegate.swift */,
 				BDAE2720289ACE2800E0E701 /* ViewController.swift */,
 				BDAE2722289ACE2800E0E701 /* Main.storyboard */,
-				BDAE2725289ACE2800E0E701 /* Assets.xcassets */,
 				BDAE2727289ACE2800E0E701 /* LaunchScreen.storyboard */,
 				BDAE272A289ACE2800E0E701 /* Info.plist */,
 				BDAE2730289D81F900E0E701 /* Game.swift */,
+				BDAE2725289ACE2800E0E701 /* Assets.xcassets */,
 			);
 			path = "Apple Pie";
 			sourceTree = "<group>";
@@ -130,6 +144,8 @@
 			files = (
 				BDAE2729289ACE2800E0E701 /* LaunchScreen.storyboard in Resources */,
 				BDAE2726289ACE2800E0E701 /* Assets.xcassets in Resources */,
+				BD807DB628A172280080A624 /* Screenshot01.png in Resources */,
+				BD807DB728A172280080A624 /* Screenshot02.png in Resources */,
 				BDAE2724289ACE2800E0E701 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
